@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    /* primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* neutral */
+        /* paragraphs */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+        /* background, headings, buttons */
+    --very-light-gray : hsl(0, 0%, 95%);
+}
+
+*{box-sizing: border-box;}
+
+body{
+    background-color: var(--very-light-gray);
+    margin: 0;
+
+    text-align: left;
+    font-size: 16px;
+}
+
+.container{
+    min-width: 200px;
+    max-width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* center-vertically */
+    margin:10% auto;
+}
+
+section{
+    padding: 2.5em 1.5em;
+}
+
+.title{
+    text-transform: capitalize;
+    font-size: 30px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: var(--very-light-gray);
+}
+
+.desc{
+    line-height: 25px;
+    font-family: 'Lexend Deca', arial;
+    color: var(--transparent-white);
+}
+
+/* sedans section */
+.sedans-section{
+    background-color: var(--bright-orange);
+}
+
+/* suv section */
+.suv-section{
+    background-color: var(--dark-cyan);
+}
+
+/* luxury section */
+.luxury-section{
+    background-color: var(--very-dark-cyan);
+}
+
+/* button */
+.learn-more-cta{
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--very-light-gray);
+    border-radius: 50px;
+    padding: 0.5em 1.3em;
+
+    font-family: 'Lexend Deca', arial;
+}
+
+.sedans-section .learn-more-cta{
+    color: var(--bright-orange);
+}
+
+.suv-section .learn-more-cta{
+    color: var(--dark-cyan);
+}
+
+.luxury-section .learn-more-cta{
+    color: var(--very-dark-cyan);
+}
+
+@media (min-width: 760px) {
+    body{
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        max-width: 790px;
+        min-width: 700px;
+        margin: 0;
+    }
+}
